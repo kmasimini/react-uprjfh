@@ -1,32 +1,32 @@
 import React, { useState } from 'react'
-import { Card, Button, Alert } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import  { useAuth } from "./AuthContext"
-import  { useHistory } from "react-router-dom"
+import './todo.css'
 
 
 export default function Dashboard(){
-   const [error, setError] = useState("")
    const { logout } = useAuth()
-   const history = useHistory()
 
    async function handleLogout(){
      setError("")
       try{
          await logout()
-         history.push("/login")
+         history.push('/login')
       }catch{
-        setError("Failed to log out")
+        setError('Failed to log out')
       }
    }
 
   return(
     <>
-     <Card>
-       <Card.Body>
-       <h2 className="text-center mb-4">To Do List</h2>
-       {error &&<Alert variant="danger">{error}</Alert>}
-         </Card.Body>
-     </Card>
+    <div className="Dashboard">
+       <header>
+        <form id="to-do-form">
+         <input type="text" placeholder="Add task"/>
+         <button type="submit">Add</button>
+         </form>
+        </header>
+      </div>
      <div className="w-100 text-center mt-2">
         <Button variant="link" onClick={handleLogout}>Log Out</Button>
       </div>
