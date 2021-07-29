@@ -3,9 +3,9 @@ import Signup from './Signup';
 import { Container } from 'react-bootstrap';
 import { AuthProvider } from './AuthContext';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Dashboard from './Dashboard';
 import Login from './Login';
 import PrivateRoute from './PrivateRoute'
+import TodoList from './TodoList'
 
 export default function App() {
   return (
@@ -18,7 +18,7 @@ export default function App() {
           <Router>
             <AuthProvider>
               <Switch>
-                <PrivateRoute exact path="/" component={Dashboard} />
+                <PrivateRoute exact path="/" component={TodoList} />
                 <Route path="/signup" component={Signup} />
                 <Route path="/login" component={Login} />
               </Switch>
