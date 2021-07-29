@@ -12,15 +12,14 @@ export default function Signup() {
   const [loading, setLoading] = useState(false)
   const history = useHistory()
     
- async function handleSubmit(e){
-   e.preventDefault()
-   
+  async function handleSubmit(e){
+    e.preventDefault()
    if(passwordRef.current.value !== passwordComfirmRef.current.value){
      return setError('Password do not match!')
    }
 
    try{
-        setError('')
+        setError("")
         setLoading(true)
        await signup(emailRef.current.value, passwordRef.current.value)
        history.push("/")
