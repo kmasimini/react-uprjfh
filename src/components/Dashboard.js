@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import './todo.css'
 
 
@@ -7,6 +7,12 @@ function Dashboard(props){
   const handleChange = e => {
     setInput(e.target.value)
   }
+
+  const inputRef = useRef(null)
+
+  useEffect(() => {
+    inputRef.current.focus()
+  })
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -19,16 +25,17 @@ function Dashboard(props){
   }
   
     return(
-      <div className="Dashboard" >
-       <header>
+   
+       
          <form id="to-do-form" className="todo-form" onSubmit={handleSubmit}>
            <input type="text" placeholder="Add Task"  value={input} name='text' className='todo-input'
            onChange={handleChange}
+           ref={inputRef}
            />
            <button type="submit">Add</button>
            </form>
-       </header>
-       </div>
+       
+       
     );
 
 }
