@@ -12,7 +12,7 @@
   justify-content: start;
   width: 520px;
   min-height: 600px;
-  background-image: url("https://th.bing.com/th/id/OIP.lmD7FIkUL4t5P-swMEPH7QHaEK?w=309&h=180&c=7&o=5&pid=1.7");
+  background-color: rgba(114, 89, 48, 0.329);
   text-align: center;
   background-size: cover;
   margin: 128px auto;
@@ -42,11 +42,11 @@ h1 {
   outline: none;
   width: 320px;
   background: transparent;
-  color: #fff;
+  color: rgba(17, 16, 16, 0.945);
 }
 
 .todo-input::placeholder {
-  color: #fff;
+  color: rgb(31, 28, 28);
 }
 
 .todo-button {

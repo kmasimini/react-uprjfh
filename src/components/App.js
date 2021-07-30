@@ -14,11 +14,11 @@ export default function App() {
         className="d-flex align-items-center justify-content-center"
         style={{ minHeight: '100vh' }}
       >
-        <div className="w-100" style={{ maxwidth: '400px' }}>
+        <div className="w-100" style={{ maxwidth: '200px' }}>
           <Router>
             <AuthProvider>
               <Switch>
-                <div className='todo-app'><PrivateRoute exact path="/" component={TodoList} /></div>
+              <PrivateRoute exact path="/" component={TodoList} />
                 <Route path="/signup" component={Signup} />
                 <Route path="/login" component={Login} />
               </Switch>
