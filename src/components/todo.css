@@ -12,8 +12,9 @@
   justify-content: start;
   width: 520px;
   min-height: 600px;
-  background: #42455279;
+  background-image: url("https://th.bing.com/th/id/OIP.lmD7FIkUL4t5P-swMEPH7QHaEK?w=309&h=180&c=7&o=5&pid=1.7");
   text-align: center;
+  background-size: cover;
   margin: 128px auto;
   border-radius: 10px;
   padding-bottom: 32px;
@@ -41,11 +42,11 @@ h1 {
   outline: none;
   width: 320px;
   background: transparent;
-  color: rgb(15, 15, 15);
+  color: #fff;
 }
 
 .todo-input::placeholder {
-  color: #141313;
+  color: #fff;
 }
 
 .todo-button {
