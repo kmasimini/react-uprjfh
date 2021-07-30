@@ -18,7 +18,7 @@ export default function App() {
           <Router>
             <AuthProvider>
               <Switch>
-                <PrivateRoute exact path="/" component={TodoList} />
+                <div className='todo-app'><PrivateRoute exact path="/" component={TodoList} /></div>
                 <Route path="/signup" component={Signup} />
                 <Route path="/login" component={Login} />
               </Switch>
