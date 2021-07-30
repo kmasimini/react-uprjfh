@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './todo.css'
 
 
-function Dashboard(){
+function Dashboard(props){
   const [input, setInput] = useState('');
   const handleChange = e => {
     setInput(e.target.value)
@@ -11,9 +11,9 @@ function Dashboard(){
   const handleSubmit = e => {
     e.preventDefault()
 
-   // props.onSubmit({
-     // text: input
-    //})
+    props.onSubmit({
+     text: input
+  })
     setInput('');
   }
   

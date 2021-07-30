@@ -11,13 +11,13 @@ function TodoList() {
 
      const newTodos = [todo,...todos]
 
-     setTodos(newTodos)
+     setTodos(newTodos);
    }
 
   return (
     <div>
        <h1>What's the plan for Today?</h1>
-       <Dashboard />
+       <Dashboard onSubmit={addTodo} />
       </div>
   )
 }
