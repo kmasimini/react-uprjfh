@@ -4,16 +4,17 @@ import { Container } from 'react-bootstrap';
 import { AuthProvider } from './AuthContext';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from './Login';
-import PrivateRoute from './PrivateRoute'
-import TodoList from './TodoList'
-import './list.css'
+import PrivateRoute from './PrivateRoute';
+import TodoList from './TodoList';
+import './list.css';
+import img1 from '.components/images/office.jpg'
 
 export default function App() {
   return (
     <div>
       <div className="form-container">
         <div className="form-content-left"> 
-        <img src="" alt="" className="form-img" />
+        <img src={ img1 } alt="" className="form-img" />
         </div>
         <Router>
         <AuthProvider>
