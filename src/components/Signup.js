@@ -33,6 +33,10 @@ export default function Signup() {
 
   return (
     <>
+    <div className="form-container">
+     <div className="form-content-left"> 
+        <img src="" alt="" className="form-img" />
+        </div>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Sign up</h2>
@@ -59,6 +63,7 @@ export default function Signup() {
           </Form>
         </Card.Body>
       </Card>
+      </div>
     </>
   );
 }
