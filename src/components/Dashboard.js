@@ -26,7 +26,7 @@ function Dashboard(props){
   
     return(
    
-   
+        <div className='todo-app'>
          <form id="to-do-form" className="todo-form" onSubmit={handleSubmit}>
            <input type="text" placeholder="Add Task"  value={input} name='text' className='todo-input'
            onChange={handleChange}
@@ -34,6 +34,7 @@ function Dashboard(props){
            />
            <button type="submit">Add</button>
            </form>
+           </div>
         
        
        
