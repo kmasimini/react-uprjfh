@@ -1,10 +1,34 @@
 import React, { useState } from 'react'
 import Dashboard from './Dashboard'
 import Todo from './Todo';
+import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import { MdDateRange } from 'react-icons/md';
+
+const useStyles = makeStyles({
+  Root: {
+    flexGrow: 1
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)',
+  },
+  title: {
+    fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
+  },
+});
 
 function TodoList() {
    const [todos, setTodos] = useState([])
-   
+   const classes = useStyles();
    const addTodo = todo => {
      if(!todo.text || /^\s*$/.test(todo.text)){
        return;
@@ -41,11 +65,47 @@ function TodoList() {
    }
 
   return (
-    <div className='todo-app'>
+    /*<div className='todo-app'>
        <Dashboard onSubmit={addTodo} />
         <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo}
         updatedTodo={updatedTodo}
         />
+      </div>*/
+      <div className={classes.root}>
+      <Grid container direction="column">
+          <Grid item container spacing={false}>
+            <Grid item xs={0} sm={0} />
+              <Grid item xs={12} sm={10}>
+              <Card >
+                <CardContent>
+                  <Grid container>
+                    <Grid item xs={3}>
+                    <div className='todo-app1'>
+                    
+                    </div>
+                      </Grid>
+                      <Grid item xs={6}>
+                      <div className='todo-app'>
+                      <Dashboard onSubmit={addTodo} />
+                  <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo}
+                   updatedTodo={updatedTodo}
+                    />
+                    </div>
+                      </Grid>
+                      <Grid item xs={3}>
+                      <div className='todo-app1'>
+                      <Typography variant="body2" style={{ cursor: 'pointer' }}>
+                      Add Due date
+                </Typography>
+                    </div>
+                      </Grid>
+                    </Grid>
+                </CardContent>
+                </Card>
+              </Grid>
+              <Grid item xs={0} sm={0} />
+            </Grid>
+      </Grid>
       </div>
   );
 }

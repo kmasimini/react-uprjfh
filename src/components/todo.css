@@ -6,18 +6,29 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
-.todo-app {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  width: 900px;
-  min-height: 600px;
-  background-color: rgba(114, 89, 48, 0.329);
+.todo-app1 {
+  
+
+  width: 350px;
+  height:600px;
+  background-color: rgba(90, 146, 136, 0.315);
   text-align: center;
   background-size: cover;
   margin: 128px auto;
   border-radius: 3px;
-  padding-bottom: 32px;
+  padding-bottom: 3px;
+}
+.todo-app {
+  
+
+  width: 400px;
+  height:600px;
+  background-color: rgba(152, 202, 191, 0.815);
+  text-align: center;
+  background-size: cover;
+  margin: 128px auto;
+  border-radius: 3px;
+  padding-bottom: 3px;
 }
 
 h1 {
@@ -32,16 +43,16 @@ h1 {
 }
 
 .todo-form {
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 }
 
 .todo-input {
   padding: 14px 32px 14px 16px;
-  border-radius: 4px 0 0 4px;
-  border: 2px solid #5d0cff;
+  border-radius: 3px 3px 3px 3px;
+  border: 3px solid #121114c0;
   outline: none;
-  width: 320px;
-  background: transparent;
+  width: 270px;
+  background: #fff;
   color: rgba(17, 16, 16, 0.945);
 }
 
@@ -50,16 +61,13 @@ h1 {
 }
 
 .todo-button {
-  padding: 16px;
+  padding: 14px 32px 14px 16px;
+  margin-left: 13px;
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   outline: none;
-  background: linear-gradient(
-    90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
-  );
+  background: #094b5c;
   color: #fff;
   text-transform: capitalize;
 }
@@ -68,17 +76,7 @@ h1 {
   border: 2px solid #149fff;
 }
 
-#to-do-form button{
-  height: 50px;
-  width: 80px;
-  border-radius: 5px;
-  border: 0;
-  cursor: pointer;
-  font-weight: bolder;
-}
-
 .todo-container {
-  display: flex;
   flex-direction: row;
   position: relative;
 }
@@ -88,11 +86,11 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin: 4px auto;
-  color: #fff;
+  color: rgb(14, 13, 13);
   background: linear-gradient(
     90deg,
-    rgba(152, 171, 180, 0.534) 0%,
-    rgba(80, 136, 131, 0.568) 100%
+    rgba(78, 129, 153, 0.685) 0%,
+    rgba(111, 64, 187, 0.568) 100%
   );
 
   padding: 16px;

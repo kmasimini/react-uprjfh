@@ -26,15 +26,16 @@ function Dashboard(props){
   
     return(
    
-   
+         <div>
          <form id="to-do-form" className="todo-form" onSubmit={handleSubmit}>
            <input type="text" placeholder="Add Task"  value={input} name='text' className='todo-input'
            onChange={handleChange}
            ref={inputRef}
            />
-           <button type="submit">Add</button>
+           <button className="todo-button" type="submit">Add</button>
            </form>
         
+       </div>
        
        
     );

@@ -1,5 +1,6 @@
 import firebase from '@firebase/app';
 require('firebase/auth');
+require("firebase/firestore");
 
 
 var firebaseConfig = {
@@ -12,5 +13,7 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+export {db};
 export const auth = app.auth();
 export default app;
