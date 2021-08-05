@@ -82,10 +82,12 @@ function TodoList() {
                       <Grid item xs={4}>
                       <div className='todo-app'>
                       <Dashboard onSubmit={addTodo} />
-                  <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo}
-                   updatedTodo={updatedTodo}
-                    />
-                    </div>
+                      <Typography variant="h4" text-align="center" >
+                        Tasks
+                      </Typography>
+                      <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo}
+                       updatedTodo={updatedTodo} />
+                       </div>
                       </Grid>
                       <Grid item xs={4}>
                       <div className='todo-app2'>
