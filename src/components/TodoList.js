@@ -65,12 +65,7 @@ function TodoList() {
    }
 
   return (
-    /*<div className='todo-app'>
-       <Dashboard onSubmit={addTodo} />
-        <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo}
-        updatedTodo={updatedTodo}
-        />
-      </div>*/
+    
       <div className={classes.root}>
       <Grid container direction="column">
           <Grid item container spacing={false}>
@@ -79,12 +74,12 @@ function TodoList() {
               <Card >
                 <CardContent>
                   <Grid container>
-                    <Grid item xs={3}>
+                    <Grid item xs={4}>
                     <div className='todo-app1'>
                     
                     </div>
                       </Grid>
-                      <Grid item xs={6}>
+                      <Grid item xs={4}>
                       <div className='todo-app'>
                       <Dashboard onSubmit={addTodo} />
                   <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo}
@@ -92,8 +87,8 @@ function TodoList() {
                     />
                     </div>
                       </Grid>
-                      <Grid item xs={3}>
-                      <div className='todo-app1'>
+                      <Grid item xs={4}>
+                      <div className='todo-app2'>
                       <Typography variant="body2" style={{ cursor: 'pointer' }}>
                       Add Due date
                 </Typography>

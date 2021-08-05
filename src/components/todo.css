@@ -8,25 +8,34 @@
 
 .todo-app1 {
   width: 350px;
-  height:600px;
+  height:700px;
   background-color: rgba(90, 146, 136, 0.315);
   text-align: center;
   background-size: cover;
-  margin: 128px auto;
+  margin: 70px auto;
   border-radius: 3px;
-  padding-bottom: 3px;
+  padding:  10px 10px 10px 10px;
+}
+.todo-app2 {
+  width: 300px;
+  height:700px;
+  background-color: rgba(90, 146, 136, 0.315);
+  text-align: center;
+  background-size: cover;
+  margin: 70px auto;
+  border-radius: 3px;
+  padding: 10px 10px;
 }
 .todo-app {
-  
-
-  width: 400px;
-  height:600px;
+  width: 374px;
+  height:700px;
   background-color: rgba(152, 202, 191, 0.815);
   text-align: center;
   background-size: cover;
-  margin: 128px auto;
+  margin: 70px auto;
   border-radius: 3px;
-  padding-bottom: 3px;
+ padding:  10px 10px 10px 10px;;
+ overflow: scroll;
 }
 
 h1 {
@@ -49,7 +58,7 @@ h1 {
   border-radius: 3px 3px 3px 3px;
   border: 3px solid #121114c0;
   outline: none;
-  width: 270px;
+  width: 240px;
   background: #fff;
   color: rgba(17, 16, 16, 0.945);
 }
@@ -62,7 +71,7 @@ h1 {
   padding: 14px 32px 14px 16px;
   margin-left: 13px;
   border: none;
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
   cursor: pointer;
   outline: none;
   background: #094b5c;
