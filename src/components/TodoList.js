@@ -76,7 +76,8 @@ function TodoList() {
                   <Grid container>
                     <Grid item xs={4}>
                     <div className='todo-app1'>
-                    
+                       <div  className="ui search">
+                       </div>
                     </div>
                       </Grid>
                       <Grid item xs={4}>
