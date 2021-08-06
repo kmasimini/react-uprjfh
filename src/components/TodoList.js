@@ -83,6 +83,7 @@ function TodoList() {
                   <Grid container>
                     <Grid item xs={4}>
                     <div className='todo-app1'>
+                    <input style={{borderRadius:'5px',border:"2px solid #e0e0e0",width:"170px", height:'30px',fontSize:'15px', margin:'15px', textAlign:"center" }} type="text" placeholder="search"  />
                     <Typography style={{color: 'black', marginTop: '20px',marginRight: '0px', marginLeft: '30px', textDecoration:"none"}} >
                     <WbSunnyIcon fontSize="medium" style={{width: ''}} />
 
