@@ -8,6 +8,13 @@ import CardContent from '@material-ui/core/CardContent';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { MdDateRange } from 'react-icons/md';
+import Calender from 'Calender'
+import WbSunnyIcon from '@material-ui/icons/WbSunny';
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
+import EventAvailableIcon from '@material-ui/icons/EventAvailable';
+import { Link, useHistory } from 'react-router-dom';
+
 
 const useStyles = makeStyles({
   Root: {
@@ -76,8 +83,22 @@ function TodoList() {
                   <Grid container>
                     <Grid item xs={4}>
                     <div className='todo-app1'>
-                       <div  className="ui search">
-                       </div>
+                    <Typography style={{color: 'black', marginTop: '20px',marginRight: '0px', marginLeft: '30px', textDecoration:"none"}} >
+                    <WbSunnyIcon fontSize="medium" style={{width: ''}} />
+
+                     <Link to="/" style={{color: 'black', marginTop: '720px',marginRight: '60px', marginLeft: '10px', textDecoration:"none" }} > My Day <i style={{color: '#e65100'}} class="fa fa-sun-o" aria-hidden="true"></i></Link></Typography  >
+                    
+                     <Typography style={{color: 'black', marginTop: '20px',marginRight: '0px', marginLeft: '30px', textDecoration:"none" }} >
+                     <CalendarTodayIcon fontSize="medium" style={{width: ''}}/>
+                      <Link  to="/Calender" style={{color: 'black', marginTop: '720px',marginRight: '60px', marginLeft: '10px', textDecoration:"none" }} > Calender <i style={{color: '#ff9800'}} class="fa fa-calendar" aria-hidden="true"></i> </Link></Typography  >
+                      <Typography style={{color: 'black', marginTop: '20px',marginRight: '0px', marginLeft: '30px', textDecoration:"none" }} >
+                      <AssignmentIndIcon fontSize="medium" style={{width: ''}}/> 
+                       <Link  to="/Notes" style={{color: 'black', marginTop: '720px',marginRight: '60px', marginLeft: '10px', textDecoration:"none" }} > Tasks <i  style={{color: '#8d6e63'}} class="fa fa-book" aria-hidden="true"></i></Link></Typography  >
+
+                       <Typography style={{color: 'black', marginTop: '20px',marginRight: '0px', marginLeft: '30px', textDecoration:"none" }} >
+                      <EventAvailableIcon fontSize="medium" style={{width: '' }}/>
+                       <Link  to="/Planned" style={{color: 'black', marginTop: '720px',marginRight: '60px', marginLeft: '10px', textDecoration:"none" }} > Planned <i style={{color: '#3e2723'}}  class="fa fa-calendar-check-o" aria-hidden="true"></i> </Link></Typography  >
+                    
                     </div>
                       </Grid>
                       <Grid item xs={4}>
