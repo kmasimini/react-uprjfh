@@ -48,6 +48,17 @@ function TodoList() {
      setTodos(newTodos);
     
    };
+   async function handleLogout() {
+    setError('');
+
+    try {
+      await logout();
+      history.push('/signin');
+    } catch {
+      setError('Failed to log out');
+    }
+  }
+
    const updatedTodo = (todoId, newValue) => {
     if(!newValue.text || /^\s*$/.test(newValue.text)){
       return;
@@ -111,6 +122,7 @@ function TodoList() {
    
           {currentUser.email}
           </Typography>
+          <Link to="/login">Sign Out</Link>
                       <Typography variant="h4" text-align="center" >
                         Tasks
                       </Typography>
