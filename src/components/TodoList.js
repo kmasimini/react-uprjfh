@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { MdDateRange } from 'react-icons/md';
 import Calender from 'Calender'
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
+import AddAlertIcon from '@material-ui/icons/AddAlert';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import EventAvailableIcon from '@material-ui/icons/EventAvailable';
@@ -132,9 +133,11 @@ function TodoList() {
                       </Grid>
                       <Grid item xs={4}>
                       <div className='todo-app2'>
-                      <Typography variant="body2" style={{ cursor: 'pointer' }}>
-                      Add Due date
-                </Typography>
+                      <Typography style={{color: 'black', marginTop: '20px',marginRight: '0px', marginLeft: '30px', textDecoration:"none" }} >
+<AddAlertIcon fontSize="medium" style={{
+               width: ''
+             }}/>
+<Link  to="/Notes" style={{color: 'black', marginTop: '720px',marginRight: '10px', marginLeft: '0px', textDecoration:"none" }} > <i  style={{marginRight: '10px',color:"#adf7d1"}}  class="fa fa-plus-square-o" aria-hidden="true"></i>Remind me<i  style={{color: '#8d6e63'}} class="fa fa-book" aria-hidden="true"></i></Link></Typography  >
                     </div>
                       </Grid>
                     </Grid>
