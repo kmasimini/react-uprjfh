@@ -14,6 +14,7 @@ import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import EventAvailableIcon from '@material-ui/icons/EventAvailable';
 import { Link, useHistory } from 'react-router-dom';
+import { useAuth } from './AuthContext';
 
 
 const useStyles = makeStyles({
@@ -36,6 +37,7 @@ const useStyles = makeStyles({
 function TodoList() {
    const [todos, setTodos] = useState([])
    const classes = useStyles();
+   const { currentUser, logout } = useAuth();
    const addTodo = todo => {
      if(!todo.text || /^\s*$/.test(todo.text)){
        return;
@@ -105,6 +107,10 @@ function TodoList() {
                       <Grid item xs={4}>
                       <div className='todo-app'>
                       <Dashboard onSubmit={addTodo} />
+                      <Typography style={{ marginLeft:'30px',fontSize: '10px' ,color:'#24527a', fontWeight:"bold", marginBottom:"50px" }}>
+   
+          {currentUser.email}
+          </Typography>
                       <Typography variant="h4" text-align="center" >
                         Tasks
                       </Typography>
