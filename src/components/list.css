@@ -20,11 +20,7 @@
 }
 
 .form-content-left {
-  background: linear-gradient(
-    90deg,
-    rgb(39, 176, 255) 0%,
-    rgb(0, 232, 236) 100%
-  );
+  background-image: url(https://www.w3schools.com/css/img_forest.jpg);
   border-radius: 10px 0 0 10px;
   position: relative;
 }
