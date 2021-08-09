@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
-import './todo.css'
+import './todo.css';
+import {db} from '../firebase'
 
 
 function Dashboard(props){
@@ -7,16 +8,20 @@ function Dashboard(props){
   const handleChange = e => {
     setInput(e.target.value)
   }
-
+  
   const inputRef = useRef(null)
 
   useEffect(() => {
     inputRef.current.focus()
-    
+
   })
 
   const handleSubmit = e => {
     e.preventDefault()
+    
+    db.collection('todo').add({
+      input: input,
+    })
      
     props.onSubmit({
       id: Math.floor(Math.random() * 10000),
