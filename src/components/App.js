@@ -19,9 +19,9 @@ export default function App() {
           <Router>
             <AuthProvider>
               <Switch>
-              <Route path="/login" component={Login} />
               <PrivateRoute exact path="/" component={TodoList} />
               <Route path="/signup" component={Signup} />
+              <Route path="/login" component={Login} />
               <Route path="/Calender" component={Calender} />
               </Switch>
             </AuthProvider>

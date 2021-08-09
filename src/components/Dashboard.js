@@ -12,6 +12,7 @@ function Dashboard(props){
 
   useEffect(() => {
     inputRef.current.focus()
+    
   })
 
   const handleSubmit = e => {
