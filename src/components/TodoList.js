@@ -118,14 +118,14 @@ function TodoList() {
                       </Grid>
                       <Grid item xs={4}>
                       <div className='todo-app'>
-                      <Dashboard onSubmit={addTodo} />
                       <Typography style={{ marginLeft:'30px',fontSize: '10px' ,color:'#24527a', fontWeight:"bold", marginBottom:"50px" }}>
                       {currentUser.email}
                       </Typography>
                       <Link to="/login">Sign Out</Link>
-                      <Typography variant="h4" text-align="center" >
+                      <Typography variant="h6" text-align="center" style={{color:'#fff'}} >
                         Tasks
                       </Typography>
+                      <Dashboard onSubmit={addTodo} />
                       <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo}
                        updatedTodo={updatedTodo} />
                        </div>

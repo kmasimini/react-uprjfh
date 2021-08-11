@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import './todo.css';
-import {db} from '../firebase'
+import {db} from '../firebase';
+import Todo from './Todo'
 
 
 function Dashboard(){
@@ -55,7 +56,10 @@ function addTodo(e) {
            </form>
              
            {todos.map((input) =>(
-             <p>{input.input}</p>
+             <Todo
+              input={input.input}
+              id={input.id}
+              />
            ))}
 
        </div>
