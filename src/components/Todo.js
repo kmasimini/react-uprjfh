@@ -12,7 +12,7 @@ function Todo({ input, inprogress, id, updatedTodo }){
     db.collection("todo").doc(id).delete();
   }
 
-  function toggleInprogress(){
+  function toggleInProgress(){
     db.collection("todo").doc(id).update({
       inprogress: !inprogress
     })
@@ -23,7 +23,7 @@ function Todo({ input, inprogress, id, updatedTodo }){
       <ListItem>
       <ListItemText primary={input} secondary={inprogress ? "In Progress" : "Completed"} />
       </ListItem>
-      <Button onClick={toggleInprogress}>{inprogress ? "UnDone" : "Done"}</Button>
+      <Button onClick={toggleInProgress}>{inprogress ? "UnDone" : "Done"}</Button>
       <RiDeleteBin6Fill onClick={deleteTodo} className='delete-icon' />
       </div>
   )       

@@ -24,6 +24,7 @@ function Dashboard(){
        setTodos(
          querySnapshot.docs.map((doc) => ({
         id: doc.id,
+        inprogress: doc.data().inprogress,
         input: doc.data().input,
        }))
        );
@@ -35,6 +36,7 @@ function addTodo(e) {
     
     db.collection('todo').add({
       inprogress: true,
+      timestamp: firebase.firestore.fieldValue.serverTimestamp(),
       input: input,
     });
      
