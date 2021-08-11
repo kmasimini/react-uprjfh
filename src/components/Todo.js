@@ -23,12 +23,12 @@ function Todo({ todos, completeTodo, removeTodo, updatedTodo }){
     return <Dashboard edit={edit} onSubmit={submitUpdate}/>;
   }
 
-  return todos.map((todo, index) => (
-    <div className={todo.isComplete ? 'todo-row complete' :
+  return todos.map((input, index) => (
+    <div className={input.isComplete ? 'todo-row complete' :
      'todo-row'} key={index}>
        
-       <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-          {todo.text}
+       <div key={input.id} onClick={() => completeTodo(input.id)}>
+          {input.input}
          </div>
            <div className="icons">
              <RiCloseCircleLine  

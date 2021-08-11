@@ -120,10 +120,9 @@ function TodoList() {
                       <div className='todo-app'>
                       <Dashboard onSubmit={addTodo} />
                       <Typography style={{ marginLeft:'30px',fontSize: '10px' ,color:'#24527a', fontWeight:"bold", marginBottom:"50px" }}>
-   
-          {currentUser.email}
-          </Typography>
-          <Link to="/login">Sign Out</Link>
+                      {currentUser.email}
+                      </Typography>
+                      <Link to="/login">Sign Out</Link>
                       <Typography variant="h4" text-align="center" >
                         Tasks
                       </Typography>
