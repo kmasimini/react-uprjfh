@@ -116,7 +116,8 @@ h1 {
 }
 
 .delete-icon {
-  margin-right: 5px;
+  margin: 5px 0px 5px 20px;
+  size: 20px;
   color: #fff;
 }
 

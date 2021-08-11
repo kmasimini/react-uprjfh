@@ -60,6 +60,7 @@ function addTodo(e) {
            {todos.map((input) =>(
              <Todo
               input={input.input}
+              inprogress={input.inprogress}
               id={input.id}
               />
            ))}

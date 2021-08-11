@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import {db} from '../firebase';
-import { RiCloseCircleLine } from 'react-icons/ri';
+import { RiDeleteBin6Fill } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
-import { ListItemText, Button } from '@material-ui/core';
+import { ListItemText, ListItem, Button } from '@material-ui/core';
 
 
 
-function Todo({ input, completeTodo, id, updatedTodo }){
+function Todo({ input, inprogress, id, updatedTodo }){
 
   function deleteTodo(){
     db.collection("todo").doc(id).delete();
@@ -14,8 +14,11 @@ function Todo({ input, completeTodo, id, updatedTodo }){
  
   return(
     <div className="todo-row">
-      <ListItemText primary={input} />
-      <RiCloseCircleLine onClick={deleteTodo} className='delete-icon' />
+      <ListItem>
+      <ListItemText primary={input} secondary={inprogress ? "In Progress" : "Completed"} />
+      </ListItem>
+      <Button>complete</Button>
+      <RiDeleteBin6Fill onClick={deleteTodo} className='delete-icon' />
       </div>
   )       
 }
