@@ -1,7 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react';
 import './todo.css';
 import {db} from '../firebase';
-import Todo from './Todo'
+import Todo from './Todo';
+import firebase from '../firebase'
 
 
 function Dashboard(){
@@ -33,6 +34,7 @@ function addTodo(e) {
     e.preventDefault()
     
     db.collection('todo').add({
+      inprogress: true,
       input: input,
     });
      
