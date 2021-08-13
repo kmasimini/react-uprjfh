@@ -33,13 +33,14 @@ export default function Signup() {
 
   return (
     <>
-    <div className="form-container">
+      
+      <div className="form-container">
      <div className="form-content-left"> 
-        </div>
+      </div>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Sign up</h2>
-            {error &&<Alert variant="danger">{error}</Alert>}
+          {error &&<Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>
@@ -57,12 +58,13 @@ export default function Signup() {
               Sign Up
             </Button>
             <div className="w-100 text-center mt-2">
-        Already have an account? <Link to="/login">Log In</Link>
+            Already have an account? <Link to="/login">Log In</Link>
       </div>
           </Form>
         </Card.Body>
       </Card>
       </div>
+     
     </>
   );
 }
